@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { NAV_ITEMS } from '../constants';
 import { Menu, X } from 'lucide-react';
@@ -16,6 +16,12 @@ const Header: React.FC = () => {
       setHidden(false);
     }
   });
+
+  const handleNavClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("Will update for you");
+    setMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -37,7 +43,8 @@ const Header: React.FC = () => {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
-              href={item.href}
+              href="#"
+              onClick={handleNavClick}
               className="text-xs font-bold tracking-widest hover:text-sanctum-orange transition-colors duration-300"
             >
               {item.label}
@@ -73,8 +80,8 @@ const Header: React.FC = () => {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
-              href={item.href}
-              onClick={() => setMobileMenuOpen(false)}
+              href="#"
+              onClick={handleNavClick}
               className="text-4xl font-display font-bold uppercase tracking-tighter hover:text-sanctum-orange transition-colors"
             >
               {item.label}

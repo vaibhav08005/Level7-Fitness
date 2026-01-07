@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const handleNotImplemented = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("Will update for you");
+  };
+
   return (
     <footer className="bg-black px-6 py-24 text-white">
       <div className="max-w-7xl mx-auto flex flex-col gap-24">
@@ -15,15 +20,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-2 gap-12 md:gap-24 text-sm tracking-widest uppercase text-white/60">
             <div className="flex flex-col gap-4">
               <h4 className="text-white font-bold">Connect</h4>
-              <a href="#" className="hover:text-sanctum-orange transition-colors">Instagram</a>
-              <a href="#" className="hover:text-sanctum-orange transition-colors">Facebook</a>
-              <a href="#" className="hover:text-sanctum-orange transition-colors">JustDial</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">Instagram</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">Facebook</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">JustDial</a>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="text-white font-bold">Gym</h4>
-              <a href="#locations" className="hover:text-sanctum-orange transition-colors">Location</a>
-              <a href="#disciplines" className="hover:text-sanctum-orange transition-colors">Classes</a>
-              <a href="#" className="hover:text-sanctum-orange transition-colors">Join</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">Location</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">Classes</a>
+              <a href="#" onClick={handleNotImplemented} className="hover:text-sanctum-orange transition-colors">Join</a>
             </div>
           </div>
         </div>

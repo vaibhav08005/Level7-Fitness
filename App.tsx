@@ -41,7 +41,10 @@ function App() {
                 </div>
             </div>
             
-            <button className="border-2 border-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300">
+            <button 
+              onClick={() => alert("Will update for you")}
+              className="border-2 border-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300"
+            >
               Get Directions
             </button>
           </div>
